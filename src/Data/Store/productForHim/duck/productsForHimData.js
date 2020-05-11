@@ -1,0 +1,51 @@
+export const scentsForHim=[
+   {
+     name: "zapaszek cytrynowy",
+     description:"pachnie jak cytrynka",
+     price:"  2240",
+     image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+    },{
+      name: "zapaszek do dupy",
+     description:"pachnie jak dupka",
+     price:"  40",
+     image:'  https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg'
+    },{
+     name: "zapaszek pomarańczowy",
+     description:"pachnie jak męska pomarańczka",
+     price:"  140",
+     image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+    },
+];
+ export const eyeCreamForHim=[
+  {
+    name: "krem na noc ",
+    description:"kremuj tylko w nocy",
+    price:"  220",
+    image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+   },{
+     name: "kremik męski w dzień kremuj tylko w dzień",
+    description:"kremowanie niczym w aushwitz",
+    price:"  40",
+    image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+   },{
+    name: "kremik do dupy ",
+    description:"kremik na 15:30 aby rowek był zawsze niebieski",
+    price:"  bezcenne",
+    image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"},
+];
+ export const faceCreamForHim={
+    forAll :{
+      forKids:[
+        {
+          name: "kremik do dupy ",
+          description:"kremik na 15:30 aby rowek był zawsze niebieski",
+          price:"  bezcenne",
+          image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"},
+      ],
+
+    }
+
+
+ };
+ export const beardCareForHim=[];
+console.log(faceCreamForHim.forAll.forKids[0])
