@@ -7,10 +7,6 @@ const  Slider= ({number}) => (
     <SliderButton/>
         <Item number={number}/>
 
-        
-
-
-
     </Wrapper>
 );
 const mapStateToProps = state=>({number: state.slider.slider});
