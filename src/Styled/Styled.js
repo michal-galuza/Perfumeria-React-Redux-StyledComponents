@@ -13,9 +13,10 @@ h1 , h2 , h3{
   font-weight: 600;
 }
 body , html , #root {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   background-color: white;
+  overflow-x: hidden;
 }
 
 

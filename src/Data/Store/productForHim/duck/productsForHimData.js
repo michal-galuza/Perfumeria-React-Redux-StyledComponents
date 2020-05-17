@@ -4,7 +4,8 @@ export const scentsForHim=[
      description:"pachnie jak cytrynka",
      price:"  2240",
      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
-    },{
+    },
+    {
       name: "zapaszek do dupy",
      description:"pachnie jak dupka",
      price:"  40",
@@ -14,7 +15,30 @@ export const scentsForHim=[
      description:"pachnie jak męska pomarańczka",
      price:"  140",
      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
-    },
+    },{
+      name: "odświeżacz do toalety",
+      description:"pachnie jak męska wagina",
+      price:"  220",
+      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+     },
+     {
+      name: "zapaszek pomarańczowy",
+      description:"pachnie jak męska pomarańczka",
+      price:"  140",
+      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+     },
+     {
+      name: "zapaszek pomarańczowy",
+      description:"pachnie jak męska pomarańczka",
+      price:"  140",
+      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+     },
+     {
+      name: "zapaszek pomarańczowy",
+      description:"pachnie jak męska pomarańczka",
+      price:"  140",
+      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"
+     },
 ];
  export const eyeCreamForHim=[
   {
@@ -48,4 +72,3 @@ export const scentsForHim=[
 
  };
  export const beardCareForHim=[];
-console.log(faceCreamForHim.forAll.forKids[0])

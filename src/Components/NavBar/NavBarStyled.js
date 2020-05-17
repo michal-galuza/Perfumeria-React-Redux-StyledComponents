@@ -5,7 +5,8 @@ export const Nav
     position: sticky;
     top: 0 ;
     left: 0;
-    width:100%;
+    right: 0;
+    
    height: 100px;
     background-image: linear-gradient(to right bottom, #cdfffb, #baf9f4, #a6f3ed, #91ede5, #7ae7de);
     display: flex;

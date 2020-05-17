@@ -1,15 +1,17 @@
 import React from 'react';
-import {Wrapper , Item} from './SliderStyled';
-import SliderButton from '../Button/SliderButton/SliderButton';
+import {Wrapper , SliderItemsWrapper} from './SliderStyled';
+import SliderItem from './SliderItem/SliderItem';
 import { connect } from 'react-redux';
-const  Slider= ({number}) => (
-    <Wrapper>
-    <SliderButton/>
-        <Item number={number}/>
-
-    </Wrapper>
+const Slider = ({sliderPosition}) => {
+return (
+<Wrapper>
+<SliderItemsWrapper sliderPosition={sliderPosition}>
+<SliderItem />
+<SliderItem />
+<SliderItem />
+</SliderItemsWrapper>
+</Wrapper>
 );
-const mapStateToProps = state=>({number: state.slider.slider});
-export default connect(mapStateToProps , {})(Slider);
-
-
+}
+const mapStateToProps=(state)=>({sliderPosition: state.slider.sliderPosition})
+export default connect(mapStateToProps,{}) (Slider);
