@@ -14,7 +14,7 @@ grid-template-columns:  40px 80% 40px ;
 grid-template-rows: 300px   30px;
 grid-template-areas:"buttonLeft slider buttonRight"
 "null dots empty";
-z-index: 10;
+z-index: 20;
 background:white;
 `;
 

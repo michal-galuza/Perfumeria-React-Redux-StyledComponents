@@ -1,8 +1,8 @@
 import styled from  'styled-components';
 
 export const ButtonLeft= styled.button`
-z-index: 10;
-background: transparent;
+z-index: 20;
+background: white;
 outline: none;
 border: none;
 border: 2px solid ${({theme})=>theme.colors.secondary};
@@ -22,8 +22,8 @@ box-shadow: 20px 0px 20px -15px ${({theme})=>theme.colors.primary};
 }
 `;
 export const ButtonRight= styled.button`
-z-index: 10;
-background: transparent;
+z-index: 20;
+background: white;
 outline: none;
 border: none;
 box-shadow: -20px 0px 20px -15px ${({theme})=>theme.colors.primary};

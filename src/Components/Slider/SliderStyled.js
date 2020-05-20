@@ -10,15 +10,18 @@ border-left: none;
 border-right: none;
 align-items:center;
 justify-items: center;
+overflow:hidden ;
+position: relative;
 `;
 
 export const SliderItemsWrapper=styled.div`
+position: absolute;
+display:flex;
+flex-wrap: nowrap;
+align-items:center;
+justify-content: center;
 height: 100%;
-overflow-x: scroll;
 background: transparent;
-transform: translateX(${(props)=>props.sliderPosition}%);
+transform: translateX(${({sliderPosition})=>sliderPosition}%);
 transition: transform 1s linear .1s;
-::-webkit-scrollbar{
-    display: none;
-};
 `;

@@ -19,7 +19,8 @@ export const Wrapper = styled.div`
     align-items: center;
     background-color: transparent;
     border: none;
-   
+   outline:none;
+   cursor: pointer;
     :hover{
         transform: scale(1.05);
         transition: transform .2s ease-in-out 0.05s;

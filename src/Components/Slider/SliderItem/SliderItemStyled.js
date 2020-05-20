@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-z-index:1;
+position: relative;
 min-width: 100%;
 height: 100%;
 display: grid;
