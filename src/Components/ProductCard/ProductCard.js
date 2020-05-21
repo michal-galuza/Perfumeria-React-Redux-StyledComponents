@@ -10,6 +10,7 @@ const ProductCard =({items})=>(
         <Type>Typ:</Type>
         <Description>{items.description}</Description>
         <Price>Cena   {items.price}zł</Price>
+        
     </Wrapper>
     </Button>
 );
