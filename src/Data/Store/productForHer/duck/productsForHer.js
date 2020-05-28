@@ -1,7 +1,7 @@
-export const scentsForHer=[];
-export const faceCreamForHer=[];
-export const eyeCreamForHer=[];
-export const faceSerumForHer=[];
-export const lipstickForHer=[];
-export const mascaraForHer=[];
-export const foundationMakeUpForHer=[];
+export const zapachy=[];
+export const kremDoTwarzy=[];
+export const kremPodOczy=[];
+export const serumDoTwarzy=[];
+export const szminka=[];
+export const tuszDoRzęs=[];
+export const podkład=[];

@@ -3,8 +3,8 @@ import reducerForHim from './productForHim/duck';
 import reducerForHer from './productForHer/duck';
 import reducerCounter from './sliders/duck/reducers';
 const rootReducer = combineReducers({
-    forHim:reducerForHim,
-    forHer:reducerForHer,
+    dlaNiego:reducerForHim,
+    dlaNiej:reducerForHer,
     slider: reducerCounter,
 })
 

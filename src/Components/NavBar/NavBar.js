@@ -8,9 +8,9 @@ const NavBar = ()=>(
     <Nav>
     <Logo/>
     <NavItem as={NavLink} exact to="/">Strona główna</NavItem>
-    <NavItem as={NavLink} to="/sale">Promocje</NavItem>
-    <NavItem as={NavLink} to="/products">Produkty</NavItem>
-    <NavItem as={NavLink} to="/about_us">O nas</NavItem>
+    <NavItem as={NavLink} to="/promocje">Promocje</NavItem>
+    <NavItem as={NavLink} to="/produkty">Produkty</NavItem>
+    <NavItem as={NavLink} to="/oNas">O nas</NavItem>
     <Basket/>
     </Nav>
 );

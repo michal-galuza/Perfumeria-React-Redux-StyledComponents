@@ -1,22 +1,19 @@
-import {scentsForHer,
-    faceCreamForHer,
-    eyeCreamForHer,
-    faceSerumForHer,
-    lipstickForHer,
-    mascaraForHer,
-    foundationMakeUpForHer} from './productsForHer';
+import {zapachy,
+    kremDoTwarzy,
+    kremPodOczy,
+    serumDoTwarzy,
+    szminka,
+    tuszDoRzęs,
+    podkład} from './productsForHer';
 
-const forHerState={
-    scentsForHer,
-    faceCreamForHer,
-    eyeCreamForHer,
-    faceSerumForHer,
-    lipstickForHer,
-    mascaraForHer,
-    foundationMakeUpForHer
-}
 
-const reducerForHer=(state=forHerState , action)=>{
+const reducerForHer=(state={zapachy,
+    kremDoTwarzy,
+    kremPodOczy,
+    serumDoTwarzy,
+    szminka,
+    tuszDoRzęs,
+    podkład} , action)=>{
     switch(action.type){
         
             default: return state
