@@ -2,8 +2,8 @@ import React from 'react';
 import {Button , Wrapper , Image , Title
 , Type , Description, Price} from './ProductCardStyled';
 
-const ProductCard =({items})=>(
-    <Button>
+const ProductCard =({items  , to})=>(
+    <Button  to={to}>
     <Wrapper>
         <Image background={items.image}></Image>
         <Title>{items.name}</Title>

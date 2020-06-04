@@ -8,7 +8,7 @@ export const Nav
     right: 0;
     
    height: 100px;
-    background-image: linear-gradient(to right bottom, #cdfffb, #baf9f4, #a6f3ed, #91ede5, #7ae7de);
+    background: ${({theme})=>theme.colors.primaryChanged} ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,17 +32,17 @@ export const NavItem
     font-size: 1em;
     margin: 0 10px;
     border-radius: 5px;
-    box-shadow: 0 15px 20px -15px black;
+    border: 2px solid ${({theme})=>theme.colors.button};
+    box-shadow: 0 15px 20px -15px ${({theme})=>theme.colors.button};
     :hover{
-        background:${({theme})=> theme.colors.secondary};
+        background:${({theme})=> theme.colors.primary};
         transition: background .2s ease-in-out ;
-
+        
     }
   &.active{
         background: ${({theme})=> theme.colors.button};
-        color: white;
+        color: #f2f2f2;
         animation: navitem__active .5s ease-in-out  both;
-
     }
 
 `;

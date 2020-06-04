@@ -7,15 +7,14 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 h1 , h2 , h3{
   font-weight: 600;
 }
 body , html , #root {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: white;
+    min-height: 100% ;
+    height: 100%;
   overflow-x: hidden;
 }
 

@@ -3,6 +3,6 @@ import {NavLink} from 'react-router-dom';
 import {LogoStyled} from './LogoStyled';
 
 const Logo = ()=>(
-    <LogoStyled as={NavLink} to="/" >Perfumeria</LogoStyled>
+    <LogoStyled as={NavLink} to="/" >Eufemia</LogoStyled>
 );
 export default Logo;

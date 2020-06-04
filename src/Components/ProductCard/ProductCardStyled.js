@@ -1,29 +1,31 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-   
-    width: 200px;
-    height: 400px;
+   margin:10px 20px;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: repeat(7,1fr);
     grid-row-gap: 10px;
-   
+    background-color: white;
+    text-align:center;
+    color:black;
 `;
 
- export const Button = styled.button`
-    margin: 25px;
+ export const Button = styled(Link)`
+ text-decoration:none;
     width: 200px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
     border: none;
    outline:none;
    cursor: pointer;
-    :hover{
+   transition: transform .2s ease-in-out 0.05s;
+    :hover {
         transform: scale(1.05);
-        transition: transform .2s ease-in-out 0.05s;
         border: 2px solid  ${({theme})=>theme.colors.secondary};
         border-radius: 5px;
         z-index: 2;
@@ -35,7 +37,9 @@ export const Wrapper = styled.div`
 export const Image = styled.div`
 background-image: url(${props=>props.background});
 background-repeat: no-repeat;
-background-size: cover ;
+background-size: contain ;
+width:100%;
+height:100%;
 grid-row: 1/4;
 `;
 export const Title = styled.h3`

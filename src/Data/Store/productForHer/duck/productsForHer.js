@@ -1,7 +1,7 @@
 export const zapachy=[];
-export const kremDoTwarzy=[];
-export const kremPodOczy=[];
-export const serumDoTwarzy=[];
-export const szminka=[];
-export const tuszDoRzęs=[];
-export const podkład=[];
+export const kremy_do_twarzy=[];
+export const kremy_pod_oczy=[];
+export const sera_do_twarzy=[];
+export const szminki=[];
+export const tusze_do_rzęs=[];
+export const podkłady=[];
