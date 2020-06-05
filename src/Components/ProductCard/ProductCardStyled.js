@@ -2,13 +2,12 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-   margin:10px 20px;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: repeat(7,1fr);
     grid-row-gap: 10px;
-    background-color: white;
+    background-color:white;
     text-align:center;
     color:black;
 `;
@@ -17,6 +16,7 @@ export const Wrapper = styled.div`
  text-decoration:none;
     width: 200px;
     height: 400px;
+    margin:0 20px 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,9 +35,8 @@ export const Wrapper = styled.div`
 
 
 export const Image = styled.div`
-background-image: url(${props=>props.background});
-background-repeat: no-repeat;
-background-size: contain ;
+background: url(${props=>props.background}) no-repeat  center center ;
+background-size:contain;
 width:100%;
 height:100%;
 grid-row: 1/4;

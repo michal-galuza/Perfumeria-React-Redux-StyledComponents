@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 //zmiany kolorów według płci 
 export const Wrapper = styled.div`
-width:90%;
-height:90%;
+width:calc( 100% - 20px);
+height:calc( 100% - 50px);
 background: #ffdae0;
+margin: 50px 0 0 20px ;
 padding:20px 0px;
 justify-self: flex-end;
 align-self:flex-end;

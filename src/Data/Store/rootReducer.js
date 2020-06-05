@@ -6,6 +6,6 @@ const rootReducer = combineReducers({
     dlaNiego:reducerForHim,
     dlaNiej:reducerForHer,
     slider: reducerCounter,
-})
+});
 
 export default rootReducer;

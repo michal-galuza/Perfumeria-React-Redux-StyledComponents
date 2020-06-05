@@ -6,4 +6,7 @@ export const LogoStyled = styled(NavLink)`
     width: 30%;
     text-decoration: none;
     color: ${({theme})=> theme.colors.button};
+    :hover{
+        color:pink;
+    }
 `;
