@@ -1,10 +1,10 @@
 import React from 'react';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import {H2 , ForHim , ForHer , Wrapper , ContentWrapper , TypeWrapper , ForAll} from './ProductsStyled';
 import ErrorPage from '../ErrorPage/ErrorPage';
+import CategoryCard from '../../Components/CategoryCard/CategoryCard';
 const Prodcuts=({match , data  , secondData})=>{
 
     const nestedMap=(data , url)=>(Object.keys(data).map(name=>{
@@ -12,16 +12,14 @@ const Prodcuts=({match , data  , secondData})=>{
         changedName=changedName[0].toUpperCase() + changedName ;
         changedName = changedName.replace(changedName[1] , "")
             return( 
-                data[name].map((items , index)=><ProductCard to={`${url}/${changedName}/${index}`} key={index} items={items}/>)
+                data[name].map((items , index)=><ProductCard  match={match.params.type} to={`${url}/${changedName}/${index}`} key={index} items={items}/>)
                     )}));
 
     const categoryMap=(data , url)=>(Object.keys(data).map((name , index) =>{
         name=name[0].toUpperCase() + name ;
         name = name.replace(name[1] , "")
-            return( 
-                    <Link key={index} to={`${url}/${name}`}>
-                    <h2>{name.replace(reg , " ")}</h2>
-                    </Link>)}))
+ return(<CategoryCard index={index} key={name} to={`${url}/${name}`} name={name.replace(reg , " ")} match={match}/>)}))
+                   
 
     const {params}=match
     const lenght = Object.keys(params).length;
@@ -29,13 +27,9 @@ const Prodcuts=({match , data  , secondData})=>{
 
     return ( 
 <Wrapper>
-    <SideMenu/>
+    <SideMenu match={match}/>
         <ContentWrapper>
-            {data===undefined 
-                ?
-            <ErrorPage/>
-                :
-            lenght===0
+            {data===undefined  ?  <ErrorPage/>  :   lenght===0
                 ?
                 <TypeWrapper>
                     <ForHer to={`${match.url}/dlaNiej`}><H2>Dla niej</H2></ForHer>
@@ -58,7 +52,7 @@ const Prodcuts=({match , data  , secondData})=>{
                         :
                         <ErrorPage/> 
                 :
-            data.map((items , index)=><ProductCard to={`${match.url}/${index}`} key={index} items={items}/>
+            data.map((items , index)=><ProductCard match={match.params.type} to={`${match.url}/${index}`} key={index} items={items}/>
            )}
     </ContentWrapper>
 </Wrapper>
@@ -89,10 +83,8 @@ export default connect(mapStateToProps , {}) (Prodcuts);
 
 
 
-//side Menu lekki odstęp od krawędzi oraz nav nieskończenie długie
-//side menu zawartość u góry 
-// każdy błąd url ma zwracać 404 page 
+
+
 //kategorie póki co bez obrazków trzeba wymyślić na to 
 //patent
-//him her oraz wszystko 
-//CZAS OPERACYJNY GODZINA 15:00
+

@@ -15,8 +15,9 @@ export const Wrapper = styled.div`
  export const Button = styled(Link)`
  text-decoration:none;
     width: 200px;
-    height: 400px;
+    height: 350px;
     margin:0 20px 20px 20px;
+    padding:0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +27,19 @@ export const Wrapper = styled.div`
    transition: transform .2s ease-in-out 0.05s;
     :hover {
         transform: scale(1.05);
-        border: 2px solid  ${({theme})=>theme.colors.secondary};
+        border: 1px solid  ${({color})=>color==="dlaNiej"
+ ?
+`#ffdae0`
+:
+color==="dlaNiego"
+?
+({theme})=>theme.colors.sideMenuOne
+:
+color==="wszystkieProdukty"?
+({theme})=>theme.colors.sideMenuTwo
+:
+({theme})=>theme.colors.primaryChanged
+ };
         border-radius: 5px;
         z-index: 2;
     }
