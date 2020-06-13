@@ -1,7 +1,10 @@
 import React from 'react';
-import {Image , Button} from './BasketStyled';
+import {Image , Button , Number} from './BasketStyled';
 
 const Basket=()=>(
-<Button><Image src="https://img.icons8.com/material-outlined/48/000000/shopping-basket-2.png"/></Button>
+<Button to="/koszyk">
+<Image src="https://www.materialui.co/materialIcons/action/shopping_basket_white_192x192.png"/>
+<Number>10</Number>
+</Button>
 );
 export default Basket;

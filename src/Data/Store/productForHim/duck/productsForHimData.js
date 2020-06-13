@@ -1,6 +1,17 @@
+//minimum 500x500 pxlewy dolny róg zdjęcia
+//bez napisów
+//otwierasz zdjecie lewym przyciskiem
+//prawy przycis myszy na zdjecie
+//koiuj adres obrazu
+//otwierasz cudzysłów i wklejasz
+//przecinek
+//name type  description price image
+//dla niego
+
 export const zapachy=[
    {
      name: "zapaszek cytrynowy",
+     type:"zapach",
      description:"pachnie jak cytrynka",
      price:"  2240",
      image:"https://image.ceneostatic.pl/data/products/97675/i-chanel-coco-perfumy-7-5ml.jpg"

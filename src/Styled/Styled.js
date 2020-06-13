@@ -16,6 +16,7 @@ body , html , #root {
     min-height: 100% ;
     height: 100%;
   overflow-x: hidden;
+  background: ${({theme})=>theme.colors.background}
 }
 
 
