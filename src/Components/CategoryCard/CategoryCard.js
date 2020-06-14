@@ -7,8 +7,8 @@ const CategoryCard = ({to , name , index , images , match} ) => {
     return ( 
         <Wrapper type={type}  to={to}>
         <Img width="100%" height="100%" src={`${images[type][index]}`}/>
-                    <H2 type={type}>{name}</H2>
-                    </Wrapper>
+        <H2 type={type}>{name}</H2>
+        </Wrapper>
      );
 }
 const mapStateToProps= state=>({images: state.categoryImg})

@@ -10,7 +10,7 @@ align-items:center;
 `;
 export const WrapperAdres=styled.form`
 width:50%;
-height:70%;
+height:60%;
 padding:25px 40px;
 display: flex;
 justify-content:space-between;

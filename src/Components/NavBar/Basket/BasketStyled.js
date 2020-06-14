@@ -14,7 +14,6 @@ display: flex;
     align-items: center;
    width: 55px;
    height: 50px;
-   margin: 0 50px;
    padding: 2px;
    border-radius: 5px;
    box-shadow: 0 15px 20px -15px ${({theme})=>theme.colors.button};
