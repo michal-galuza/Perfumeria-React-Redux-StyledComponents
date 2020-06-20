@@ -2,14 +2,25 @@ import styled from 'styled-components';
 import {Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-min-height:calc(100% - 100px);
+min-height:calc(100vh - 115);
+margin-top: 115px;
 width:100%;
-display:grid;
-grid-template-areas:
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+@media (min-width: 1300px) and (min-height:500px){
+display: grid;
+grid-template-areas: 
 "sideMenu content";
-grid-template-columns: 250px 1fr;
+grid-template-columns: 300px 1fr;
 grid-template-rows: 100%;
-background: ${({theme})=>theme.colors.background};
+padding: 50px 20px 0px 40px;
+}
+@media (max-width: 400px){
+    min-height:calc(100vh - 85px);
+margin-top: 85px; 
+}
 `;
 export const ContentWrapper=styled.div`
 grid-area:content;
@@ -19,10 +30,19 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-wrap:wrap;
-padding: 50px;
+padding: 50px 20px;
+@media (max-width: 700px){
+    padding: 10px ;
+}
 `;
 export const TypeWrapper=styled(ContentWrapper)`
 justify-content:space-between;
+height: calc(100vh - 300px);
+@media (max-width: 700px){
+    width:100vw;
+    height:calc(150vh - 100px);
+    
+}
 `;
 export const ForHim=styled(Link)`
 width:30%;
@@ -39,8 +59,16 @@ background-repeat: repeat;
 transition: transform .2s linear;
 box-shadow: 0px 20px 20px -20px black;
 border: 1px solid black;
+@media (hover: hover) and (pointer: fine) {
+
 :hover{
     transform:scale(1.05);
+}
+}
+@media (max-width: 700px){
+    width:95vw;
+    height:50vh;
+    margin: 20px 10px;
 }
 `;
 export const ForHer=styled(ForHim)`

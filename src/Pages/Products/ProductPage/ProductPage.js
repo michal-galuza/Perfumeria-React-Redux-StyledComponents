@@ -1,13 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Wrapper , WrapperContent, Btn , Label, WrapperImg , Img , Name , Input,  Brand , Type , Description, BtnWrapper , Price} from './ProductPageStyled';
+import {Wrapper , WrapperContent, Btn , Label,
+     WrapperImg , Img , Name , Input,  Brand ,
+      Type , Description, BtnWrapper , Price,
+}from './ProductPageStyled';
 import ErrorPage from '../../ErrorPage/ErrorPage';
+import SideMenu from '../../../Components/SideMenu/SideMenu';
 const ProductPage = ({data , match}) => {
     return (
         data===undefined ?
        <ErrorPage/>
         :
         <Wrapper>
+        <SideMenu isProduct="true" match={match}/>
         <WrapperImg type={match.params.type}>
         <Img height="100%" src={data.image}/>
         </WrapperImg>

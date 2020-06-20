@@ -28,11 +28,20 @@ color==="wszystkieProdukty"?
 :
 ({theme})=>theme.colors.primaryChanged
 };
-    border-radius: 5px;
-    z-index: 2;
-} ;
-:hover {
-    transform: scale(1.1);
+border-radius: 5px;
+ z-index: 2;
+:hover{
+transform: scale(1.1);
+};
+@media (max-width: 700px){
+    margin:10px;
+}
+@media (max-width: 350px){
+    margin:0px 10px 10px 10px;
+    height:350px;
+    width: 235px;
+}
+
 `;
 
 

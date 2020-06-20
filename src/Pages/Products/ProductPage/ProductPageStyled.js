@@ -1,14 +1,23 @@
 import styled from 'styled-components';
 
-
 export const Wrapper = styled.div`
 width:100%;
-height:calc( 100% - 100px);
+margin-top:115px;
 display: flex;
 justify-content:space-between;
 align-items:center;
 background: white;
 overflow:hidden;
+@media (min-width: 1080px){
+    min-height:calc(100vh - 115px);
+}
+@media (max-width: 1080px){
+    min-height:100%;
+    flex-wrap:wrap;
+}
+@media (max-width: 400px){
+    margin-top:85px;
+}
 `;
 
 export const WrapperImg=styled.div`
@@ -32,17 +41,25 @@ type==="wszystkieProdukty"?
 :
 ({theme})=>theme.colors.primaryChanged
  };
+@media (min-width: 1080px){
+    min-height: calc(100vh - 115px);
+    border:none;
+}
+@media (max-width: 1200px){
+padding:20px;
+border-top:none;
+}
 `;
 export const Img=styled.img`
 padding:10px;
-height:90%;
-object-fit:scale-down;
+width:100%;
+object-fit:cover;
 object-position:center;
 position: relative;
 transition: transform .3s linear .1s;
 box-shadow: 0 30px 25px -30px black;
 :hover{
-    transform: scale(1.05);
+transform: scale(1.05);
 }
 `;
 export const WrapperContent=styled(WrapperImg)`
@@ -51,10 +68,13 @@ justify-content:center;
 align-items:flex-start;
 flex-direction:column;
 background:${({theme})=>theme.colors.background};
+min-height:100%;
+@media (max-width: 1080px){
+    padding-bottom: 60px;
+}
 `;
 export const Name=styled.h1`
 width:80%;
-height: 130px;
 border-bottom: 1px solid lightgrey;
 display:flex;
 align-items:flex-end;
@@ -65,45 +85,54 @@ padding:0px 10px;
 `;
 export const Brand=styled.p`
 width:80%;
-height: 50px;
 border-bottom: 1px solid lightgrey;
 display:flex;
 align-items:flex-end;
 font-size:1.2em;
-font-weight: normal;
 text-align: start;
-padding:5px 10px;
+padding:15px 10px;
+
 `;
 export const Type=styled(Brand)`
 font-style:italic;
 `;
-export const Description = styled(Type)`
-height: 180px;
+export const Description = styled(Brand)`
 flex-wrap:wrap;
+font-style:italic;
 `;
 export const Price = styled(Brand)`
+align-items:flex-start;
+margin: 10px 0;
+font-weight: bold;
+font-size:1.2em;
 `;
 export const BtnWrapper=styled.div`
 width:80%;
-height: 60px;
 padding:5px 10px;
-font-size:1.2em;
+font-size:1.1em;
 display:flex;
 align-items:center;
 justify-content:space-between;
+flex-wrap:wrap;
+@media (min-width: 1444px){
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 360px){
+    width:90%;
+    justify-content:flex-start;
+}
 `;
 export const Label= styled.label`
 display: flex;
     justify-content: center;
-    align-items: center;
-    height:35px;
-    font-size: 1.05em;
-  
+    align-items: center;  
 `;
 export const Input = styled.input`
-width:140px;
-height:30px;
+width:100px;
+
     font-size: 1.05em;
+    padding:2px;
     margin-left:10px;
     border-radius:10px;
     border:1px solid lightgrey;
@@ -122,14 +151,16 @@ position:relative;
     align-items: center;
     background: transparent;
     text-decoration: none;
-    width:300px;
-    height:35px;
+    width:250px;
+    height: 40px;
     font-size: 1.05em;
     border-radius: 50px;
     border: 1px solid lightgrey;
     overflow:hidden;
     z-index:1;
-    ::before{
+    @media (hover: hover) and (pointer: fine) {
+ 
+ ::before{
         content:'';
         position:absolute;
         width:100%;
@@ -144,4 +175,20 @@ position:relative;
             transform: translateX(0);
         }
     }
+    }
+    @media (max-width: 1444px){
+        background: ${({theme})=>theme.colors.button};
+        color:white;
+        width:200px;
+        margin-top:20px;
+    }
+    @media (max-width: 1080px){
+        background: ${({theme})=>theme.colors.button};
+        color:white;
+        margin-top:20px;
+    }
+    @media (max-width: 775px){
+        margin-top:20px;
+    }
+  
 `;
