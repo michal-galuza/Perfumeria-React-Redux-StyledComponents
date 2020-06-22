@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 
 export const Wrapper = styled.nav`
+
 position:fixed;
 top:0;
 left:0;
@@ -18,10 +19,12 @@ padding: 20px;
 @media (min-width:1300px){
     grid-area: sideMenu;
     position:static;
-    width:100%;
-    height:100%;
+    width:${({isProduct})=>isProduct ?`calc(100% - 100px)` : `100%`};
+    height:${({isProduct})=>isProduct ?`calc(100% - 50px)` : `100%`};;
     transform:none;
     z-index:10;
+    align-self:flex-end;
+    justify-self:center;
 }
 `;
 export const Button=styled.button`
@@ -35,7 +38,7 @@ border: 1px solid black;
 border-left:none;
 border-right:none;
 outline:none;
-background: ${({theme})=>theme.colors.primary};
+background: ${({theme})=>theme.gradients.pinkButton};
 font-size: 1.05em;
 @media (min-width:1300px){
   display:none;
@@ -46,21 +49,24 @@ font-size: 1.05em;
 `;
 export const Li = styled.li`
 margin: 10px;
-
+overflow:hidden;
 `;
 export const Ul = styled.ul`
 ${({main})=>main
 ?
 `
+overflow:hidden;
 height:100%; 
-overflow-Y: scroll;
+@media (max-height: 615px ){
+    box-shadow: inset 0px -81px 69px -136px rgba(84,84,84,1);
+    overflow-Y: scroll;
 ::-webkit-scrollbar {
     display: none;
+}
 }
 ` 
 : 
 ``};
-
 list-style:none;
 background:transparent;
 padding: 6px 10px;
@@ -91,23 +97,24 @@ color:black;
 position:relative;
 font-size:1.1em;
 font-weight:${({core})=>core ?`bold` : ` ` };
-&.active{
-    font-size:1.2em;
-    text-decoration : underline ;
+overflow:hidden;
+z-index:1;
+
+@media (hover: hover) and (pointer: fine){
     ::before{
+        opacity: .5;
         content:'';
         position:absolute;
-        width:110%;
-        height:120%;
-        background: ${({theme})=>theme.colors.primary};
+        width:90%;
+        height:50%;
+        background: pink;
         z-index:-1;
         transition: transform .3s ease-in-out ;
-        top:50%;
-        left:50%;
-        transform:translate(-50% , -50%);
+        transform: translate(-130% , 100%);}
+:hover{
+    ::before{transform: translate(-20% , 100%) ;}
+    }
 }
-}
-
 `;
 export const CloseBtn=styled.button`
 position:fixed;

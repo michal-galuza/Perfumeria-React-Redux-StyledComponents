@@ -7,7 +7,7 @@ export const Hamburger = styled(HamburgerButton)`
 `
 export const Nav=styled.nav`
  box-shadow: 0 0 20px 0px black;
- background: ${({theme})=>theme.colors.background} ;
+ background: ${({theme})=>theme.gradients.navBar} ;
 padding: 0 50px;
 position:fixed;
 top:0;

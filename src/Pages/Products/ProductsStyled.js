@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-min-height:calc(100vh - 115);
+min-height:calc(100vh - 115px);
 margin-top: 115px;
 width:100%;
 display:flex;

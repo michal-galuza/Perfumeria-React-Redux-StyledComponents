@@ -2,35 +2,39 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 width:100%;
-margin-top:115px;
-display: flex;
-justify-content:space-between;
-align-items:center;
-background: white;
-overflow:hidden;
-@media (min-width: 1080px){
-    min-height:calc(100vh - 115px);
+min-height: calc(100vh - 80px);
+margin-top:80px;
+background: ${({theme})=>theme.colors.background};
+display:grid;
+grid-template-columns: 400px  1fr 1fr;
+grid-template-areas: "sideMenu img content";
+@media (max-width: 1300px){
+    min-height: calc(100vh - 115px);
+    grid-template-columns: 1fr;
+    margin-top:115px;
+    grid-template-rows:calc(100vh - 115px) 1fr;
+grid-template-areas: 
+" img "
+"content";
 }
-@media (max-width: 1080px){
-    min-height:100%;
-    flex-wrap:wrap;
-}
-@media (max-width: 400px){
+
+@media(max-width: 400px){
     margin-top:85px;
+    grid-template-rows:calc(100vh - 85px) 1fr;
 }
 `;
 
 export const WrapperImg=styled.div`
+grid-area: img;
 width:100%;
 height:100%;
 padding:60px;
 display: flex;
 justify-content:center;
 align-items:center;
-border: 1px solid black;
 background: ${({type})=>type==="dlaNiej"
  ?
-`#ffdae0`
+ ({theme})=>theme.gradients.pink
 :
 type==="dlaNiego"
 ?
@@ -41,34 +45,32 @@ type==="wszystkieProdukty"?
 :
 ({theme})=>theme.colors.primaryChanged
  };
-@media (min-width: 1080px){
-    min-height: calc(100vh - 115px);
-    border:none;
-}
-@media (max-width: 1200px){
-padding:20px;
+@media (max-width: 1300px){
+padding:40px;
 border-top:none;
+}
+@media (max-width: 500px){
+padding:10px;
 }
 `;
 export const Img=styled.img`
-padding:10px;
 width:100%;
-object-fit:cover;
+height:100%;
+object-fit:scale-down;
 object-position:center;
-position: relative;
 transition: transform .3s linear .1s;
-box-shadow: 0 30px 25px -30px black;
 :hover{
 transform: scale(1.05);
 }
 `;
 export const WrapperContent=styled(WrapperImg)`
+grid-area: content;
 display:flex;
 justify-content:center;
 align-items:flex-start;
 flex-direction:column;
 background:${({theme})=>theme.colors.background};
-min-height:100%;
+height:100%;
 @media (max-width: 1080px){
     padding-bottom: 60px;
 }
