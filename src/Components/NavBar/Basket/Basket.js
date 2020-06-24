@@ -1,10 +1,13 @@
 import React from 'react';
 import {Image , Button , Number} from './BasketStyled';
-
-const Basket=({fn})=>(
+import { connect } from 'react-redux';
+const Basket=({data , fn})=>(
 <Button onClick={fn} to="/koszyk">
 <Image  src="https://www.materialui.co/materialIcons/action/shopping_basket_white_192x192.png"/>
-<Number>10</Number>
+<Number>{data.length}</Number>
 </Button>
 );
-export default Basket;
+const mapStateToProps=state=>({
+    data: state.basket
+  })
+export default connect(mapStateToProps) (Basket);

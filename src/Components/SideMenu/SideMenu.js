@@ -24,7 +24,7 @@ const [isOpen , setOpen]= useState(false)
  <Wrapper isProduct={isProduct} isOpen={isOpen} type={match.params.type} className={className}>
 
     <Ul main="true">
-    <MenuLogo isMenu={true}/>
+    <MenuLogo ismenu={true}/>
         <Ul  core="true" key={"wszystkieProdukty"} >
         <LinkSide onClick={()=>setOpen(isOpen===true?false:true)} core="true"  exact  to="/produkty/wszystkieProdukty">Wszystkie produkty:</LinkSide>
         </Ul>

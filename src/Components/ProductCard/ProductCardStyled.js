@@ -7,7 +7,7 @@ text-decoration: none;
 display:grid;
 grid-template-rows: repeat(7 , 1fr);
 width: 270px;
-height: 400px;
+height: 300px;
 margin: 20px;
 padding:5px;
 text-align: center;

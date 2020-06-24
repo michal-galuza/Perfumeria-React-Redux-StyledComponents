@@ -26,14 +26,14 @@ const Prodcuts=({match , data  , secondData})=>{
     const reg = /_/gi ;
 
     return ( 
-<Wrapper>
+<Wrapper id="wrapper">
     <SideMenu match={match}/>
-        <ContentWrapper>
+        <ContentWrapper >
             {data===undefined  ?  <ErrorPage/>  :   lenght===0
                 ?
                 <TypeWrapper>
                     <ForHer to={`${match.url}/dlaNiej`}><H2>Dla niej</H2></ForHer>
-                    <ForAll to={`${match.url}/wszystkieProdukty`}><H2>Wszystkie produkty</H2></ForAll>
+                    <ForAll to={`${match.url}/wszystkieProdukty`}><H2>Wszystkie </H2></ForAll>
                     <ForHim to={`${match.url}/dlaNiego`}><H2>Dla niego</H2></ForHim>
                 </TypeWrapper>
                 :

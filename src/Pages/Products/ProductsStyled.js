@@ -35,18 +35,26 @@ padding: 50px 20px;
     padding: 10px ;
 }
 `;
-export const TypeWrapper=styled(ContentWrapper)`
-justify-content:space-between;
-height: calc(100vh - 300px);
-@media (max-width: 700px){
-    width:100vw;
-    height:calc(150vh - 100px);
-    
+export const TypeWrapper=styled.div`
+display:flex;
+justify-content:flex-start;
+align-items:center;
+flex-wrap:wrap;
+flex-direction:column;
+padding: 0 5px;
+width:100%;
+height:100%;
+@media (min-width:1000px){
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    flex-direction:row;
 }
 `;
 export const ForHim=styled(Link)`
-width:30%;
-height:90%;
+width:100%;
+height:450px;
+margin: 0 30px;
 display: flex;
 justify-content:center;
 align-items:center;
@@ -60,19 +68,29 @@ transition: transform .2s linear;
 box-shadow: 0px 20px 20px -20px black;
 border: 1px solid black;
 @media (hover: hover) and (pointer: fine) {
-
 :hover{
     transform:scale(1.05);
 }
 }
+@media (max-width:1400.98px){
+    height:450px;
+    margin: 0 10px;
+}
+@media (max-width:999.98px){
+    height:400px;
+    width: 80%;
+    margin: 30px 0;
+}
 @media (max-width: 700px){
-    width:95vw;
-    height:50vh;
-    margin: 20px 10px;
+    width:100%;
+    height:300px;
+    margin: 20px 0;
+}
+@media (max-width: 700px){
+    margin: 20px 0;
 }
 `;
 export const ForHer=styled(ForHim)`
-
 background-image: url("https://i.notino.com/images/gallery/blog_all/cz-rest/women_cz_714x350_top.jpg");
 background-size: contain;
 `;
