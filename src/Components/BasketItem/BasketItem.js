@@ -11,10 +11,6 @@ const BasketItem = ({data , store , click}) => {
   const change=e=>{
     setCount(data.price * e.target.value);
   }
-
-
-console.log(store);
-
     return ( 
         <Wrapper>
         <img alt={data.name} width="200px" src={data.image}/>
@@ -22,7 +18,7 @@ console.log(store);
         <h3>{data.brand}</h3>
         <p>{data.kind}</p>
         <p>{data.price}</p>
-       <select  onChange={change} >
+       <select onChange={change} >
                 {option.map(item=> (item===data.amount ?  
                 <option selected key={item} value={item}>{item}</option> : 
                   <option  key={item} value={item}>{item}</option>

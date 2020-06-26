@@ -16,7 +16,7 @@ const ProductPage = ({data , match , click}) => {
         e.preventDefault();
         setOpen(isOpen ? false : true)
     }
-    console.log(window.localStorage);
+
     return (
         data===undefined ?
        <ErrorPage/>
@@ -62,7 +62,7 @@ const ProductPage = ({data , match , click}) => {
  }
  const mapDispatchToProps = (dispatch) => {
     return {
-      click: movie => dispatch(actions.addItem(movie))
+      click: data => dispatch(actions.addItem(data))
     }
   }
 export default connect(mapStateToProps ,mapDispatchToProps) (ProductPage);

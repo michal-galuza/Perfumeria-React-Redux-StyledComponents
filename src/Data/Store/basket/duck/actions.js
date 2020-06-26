@@ -2,9 +2,9 @@ import types from './types';
 
 const addItem=(data)=>{
 return(
-   
+
     {type:types.ADD_ITEM ,
-       item:{ 
+       item:{
         name: data.name,
         image:data.image,
         brand:data.brand,
@@ -19,4 +19,9 @@ const deleteItem=(data)=>(
         name: data.name
     }
 );
-export default {addItem , deleteItem};
+const updateNumber=number=>(
+    {type:types.UPDATE_NUMBER ,
+     number:number
+    }
+            )
+export default {addItem , deleteItem , updateNumber};
