@@ -1,6 +1,6 @@
 import types from './types';
 
-const addItem=(data)=>{
+const addItem=data=>{
 return(
 
     {type:types.ADD_ITEM ,
@@ -14,14 +14,15 @@ return(
        }
     }
 )}
-const deleteItem=(data)=>(
+const deleteItem=data=>(
     {type:types.DELETE_ITEM ,
         name: data.name
     }
 );
-const updateNumber=number=>(
+const updateNumber=(data , e)=>(
     {type:types.UPDATE_NUMBER ,
-     number:number
+     number:e,
+     name:data.name
     }
             )
 export default {addItem , deleteItem , updateNumber};

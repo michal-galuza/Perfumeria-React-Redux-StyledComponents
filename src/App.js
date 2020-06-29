@@ -8,7 +8,11 @@ import NavBar from './Components/NavBar/NavBar';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ProductPage from './Pages/Products/ProductPage/ProductPage';
 import BasketPage from './Pages/BasketPage/BasketPage';
- const App = ()=>(
+ const App = ()=>{
+if(sessionStorage.getItem("items")===null){
+   sessionStorage.setItem("items" , JSON.stringify( [] ))
+}
+ return(
     <BrowserRouter >
     <>
     <NavBar/>
@@ -27,5 +31,5 @@ import BasketPage from './Pages/BasketPage/BasketPage';
     </>
     </BrowserRouter>
 );
-
+ }
 export default App;

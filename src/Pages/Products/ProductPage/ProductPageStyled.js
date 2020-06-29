@@ -25,22 +25,33 @@ grid-template-areas:
 }
 `;
 export const ModalAdd= styled.div`
-padding: 40vh 0;
-position: absolute;
+position:absolute;
 top:0;
 left:0;
-transform: translateX(${({isOpen})=>isOpen? `0` : `-100%` } );
-width: 100vw;
-height:100vh;
-background:${({theme})=>theme.gradients.pink};
-border:1px solid black;
+right:0;
+bottom:0;
 z-index:999;
+transform: translateX(${({isOpen})=>isOpen? `0` : `-100%`});
+background:rgba(0,0,0,0.5) ;
+`;
+
+export const ModalWrapper=styled.div`
+position:relative;
+top:50%;
+left:50%;
+width:300px;
+height:300px;
+transform: translate(-50% , -50%);
+background: ${({theme})=>theme.gradients.pink};
 display:flex;
 justify-content:space-between;
 align-items:center;
 flex-direction:column;
-flex-wrap:wrap;
+text-align:center;
+border-radius:10px;
+padding:50px 0;
 `;
+
 export const WrapperImg=styled.div`
 grid-area: img;
 width:100%;
@@ -209,7 +220,6 @@ position:relative;
     :hover{
         color:white;
         font-weight:bold;
-        border:3px solid ${({theme})=>theme.colors.button};
         ::before{
             transform: translateX(0);
         }

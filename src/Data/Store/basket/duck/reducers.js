@@ -5,9 +5,10 @@ const basketReducer=(state=initalState ,action )=>{
 switch(action.type){
     case types.ADD_ITEM:
         function sortFn(tab ){
-
-       const  productsList=JSON.parse(sessionStorage.getItem("items")).concat(tab);
-       sessionStorage.clear();
+            const storage = sessionStorage;
+            let productsList =[];
+            if(storage.length>0){
+        productsList=JSON.parse(storage.getItem("items")).concat(tab);
             productsList.sort()
             if(productsList.length>=2){
                     for(let i=0; i<productsList.length ; i++){
@@ -23,27 +24,35 @@ switch(action.type){
                         }
                     }
                 }
-                sessionStorage.setItem("items" , JSON.stringify(productsList))
-
+                storage.setItem("items" , JSON.stringify(productsList));
+            }
+            
             return productsList
             }
              return sortFn(action.item )
         case types.DELETE_ITEM:
-           
-            return JSON.parse(sessionStorage.getItem("items")).filter(element => element.name !== action.name);
-            
+            const storage = sessionStorage;
+            const productsList =JSON.parse(storage.getItem("items")).filter(element => element.name !== action.name);
+            storage.setItem("items" , JSON.stringify(productsList));
+            return productsList;
+
+            case types.UPDATE_NUMBER:
+                const storageSecond = JSON.parse(sessionStorage.getItem("items"));
+                for(let i=0 ; i<storageSecond.length ; i++){
+                    if(storageSecond[i].name===action.name){
+                       storageSecond[i].amount=parseInt( action.number)
+                    }
+                }
+                sessionStorage.setItem("items" , JSON.stringify(storageSecond));
+                return storageSecond
+
+
             default:
                 return(state)
     }
 };
-const numberReducer=(state=0 , action)=>{
-    switch(action.type){
-        case types.UPDATE_NUMBER:
-            return action.number
-        default:
-            return state
-    }
-}
 
 
-export default {basketReducer , numberReducer};
+
+
+export default basketReducer ;

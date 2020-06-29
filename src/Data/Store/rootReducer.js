@@ -9,8 +9,7 @@ const rootReducer = combineReducers({
     dlaNiej:reducerForHer,
     slider: reducerCounter,
     categoryImg: reducerCategoryImg,
-    basket: basket.basketReducer,
-    basketNumber: basket.numberReducer
+    basket: basket,
 });
 
 export default rootReducer;

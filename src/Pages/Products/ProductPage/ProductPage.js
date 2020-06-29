@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import {Wrapper , WrapperContent, Btn , Label,
      WrapperImg , Img , Name , Input,  Brand ,
-      Type , Description, BtnWrapper , Price,ModalAdd
+      Type , Description, BtnWrapper , Price,ModalAdd , ModalWrapper
 }from './ProductPageStyled';
 import ErrorPage from '../../ErrorPage/ErrorPage';
 import SideMenu from '../../../Components/SideMenu/SideMenu';
@@ -22,12 +22,14 @@ const ProductPage = ({data , match , click}) => {
        <ErrorPage/>
         :
         <Wrapper onSubmit={submitFn}>
-        <SideMenu isProduct="true" match={match}/>
+        <SideMenu isProduct match={match}/>
         <ModalAdd isOpen={isOpen}>
+        <ModalWrapper>
             <h2>Przedmiot dodany do koszyka</h2>
             <p>czy chcesz przjeść do koszyka?</p>
             <Btn as={Link} to="/koszyk">Przejdz do koszyka </Btn>
             <Btn as={Link} to={`/produkty/${match.params.type}/${match.params.category}`}>Kontynuuj zakupy </Btn>
+            </ModalWrapper>
         </ModalAdd>
         <WrapperImg type={match.params.type}>
         <Img height="100%" src={data.image}/>

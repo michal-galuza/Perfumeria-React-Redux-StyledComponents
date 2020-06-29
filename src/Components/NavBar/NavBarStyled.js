@@ -108,6 +108,7 @@ width: 900px;
     flex-direction:column;
     justify-content:center;
 align-items:space-around;
+transition: transform .5s ease ;
 transform:translateX( ${({open})=>open?`0` :`-150%`} );
 };
 `;
