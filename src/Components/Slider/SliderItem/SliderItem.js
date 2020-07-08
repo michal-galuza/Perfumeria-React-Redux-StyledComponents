@@ -1,17 +1,16 @@
 import React from 'react';
-import {Wrapper , Img , Title , Type , Description , Price} 
-from './SliderItemStyled';
+import {Item , Img}  from './SliderItemStyled';
 
-const SliderItem = () => {
-return(
-<Wrapper>
-<Img src="https://skleppieknydom.pl/28156-tm_home_default/beztluszczowa-baza-pod-makijaz-matujaca-make-up-base-ingrid.jpg"/>
-<Title>Produkt 1</Title>
-<Type>perfum</Type>
-<Description>lore ipsumlore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum  </Description>
-<Price>220zł</Price>
-</Wrapper>
-);
+const SliderItem = ({x , data}) => {
+    return ( 
+    <Item x={x}>
+    <Img src={data.image}/>
+    <h2>{data.name}</h2>
+    <p>{data.brand}</p>
+    <p>{data.type}</p>
+    <p>{data.description}</p>
+    <p>{data.price} zł</p>
+    </Item> );
 }
-
+ 
 export default SliderItem;

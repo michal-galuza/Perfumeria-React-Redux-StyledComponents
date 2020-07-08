@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Wrapper , Label , Input , Btn , Img}  from './BasketItemStyled';
+import {Wrapper , Label , Input , Btn , Img , H3}  from './BasketItemStyled';
 import actions from '../../Data/Store/basket/duck/actions';
 import {connect} from  'react-redux';
 const BasketItem = ({data , click , update , className}) => {
@@ -16,8 +16,8 @@ const BasketItem = ({data , click , update , className}) => {
     return (
         <Wrapper className={className}>
         <Img alt={data.name} width="100%" height="100%" src={data.image}/>
-        <Label>Nazwa:  <h3>{data.name}</h3></Label>
-        <Label>Marka:   <h3>{data.brand}</h3></Label>
+        <Label>Nazwa:  <H3>{data.name}</H3></Label>
+        <Label>Marka:   <H3>{data.brand}</H3></Label>
       <Label>Rodzaj: <p>{data.kind}</p></Label>
       <Label>Cena za sztuke:  <p>{data.price} zł</p></Label>
       <Label>Ilość: <Input onChange={change} >

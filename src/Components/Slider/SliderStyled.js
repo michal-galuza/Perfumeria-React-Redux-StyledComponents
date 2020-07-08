@@ -1,27 +1,37 @@
 import styled from 'styled-components';
 
-export const Wrapper=styled.div`
-width: 100%;
-height: 100%;
-background: transparent;
-grid-area: slider;
-border: 2px solid ${({theme})=>theme.colors.secondary};
-border-left: none;
-border-right: none;
-align-items:center;
-justify-items: center;
-overflow:hidden ;
-position: relative;
-`;
 
-export const SliderItemsWrapper=styled.div`
-position: absolute;
+export const Wrapper=styled.div`
+position:relative;
+margin: 150px auto;
+width:90vw;
+height:250px;
 display:flex;
-flex-wrap: nowrap;
-align-items:center;
-justify-content: center;
-height: 100%;
-background: transparent;
-transform: translateX(${({sliderPosition})=>sliderPosition}%);
-transition: transform 1s linear .1s;
+justify-content:center;
+overflow:hidden;
+`;
+export const Btn=styled.button`
+position:absolute;
+top:0;
+left:${({right})=>right? `100%` : `0`};
+transform:translateX(${({right})=>right? `-100%` : `0`});
+z-index:10;
+width:50px;
+height:100%;
+background:transparent;
+border:none;
+outline:none;
+font-size:25px;
+font-weight:bold;
+color:white;
+:hover{
+    background:rgba(0,0,0,0.5550595238095238);
+}
+`;
+export const P=styled.p`
+
+ background:rgba(0,0,0,0.5550595238095238);
+ ${Btn}:hover &{
+    background:transparent;
+ }
 `;

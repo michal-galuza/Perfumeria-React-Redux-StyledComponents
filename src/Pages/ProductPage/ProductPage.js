@@ -5,9 +5,9 @@ import {Wrapper , WrapperContent, Btn , Label,
      WrapperImg , Img , Name , Input,  Brand ,
       Type , Description, BtnWrapper , Price,ModalAdd , ModalWrapper
 }from './ProductPageStyled';
-import ErrorPage from '../../ErrorPage/ErrorPage';
-import SideMenu from '../../../Components/SideMenu/SideMenu';
-import actions from '../../../Data/Store/basket/duck/actions';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import SideMenu from '../../Components/SideMenu/SideMenu';
+import actions from '../../Data/Store/basket/duck/actions';
 const ProductPage = ({data , match , click}) => {
     const [amount=1 , setCounter]=useState();
     const [isOpen , setOpen]=useState(false);
@@ -46,6 +46,8 @@ const ProductPage = ({data , match , click}) => {
          onChange={e => setCounter(e.target.value)} 
          placeholder="max 15" max="15" maxLength="2"
           type="number" name="number"
+          pattern="{1,15}"
+          min="1"
               title="Wprowadz ilość sztuk. Max 15"
           /></Label> 
             <Btn onClick={()=>click(data)}>Dodaj do koszyka</Btn>

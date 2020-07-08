@@ -1,96 +1,84 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 export const Wrapper = styled.div`
+position:relative;
 width:100%;
 margin-top:80px;
 background:${({theme})=>theme.gradients.navBar};
-display: flex;
-justify-content:flex-start;
-align-items:flex-start;
-flex-direction:column;
+display:grid;
+grid-template-rows: 150px 1fr ;
+grid-template-columns:350px 1fr ;
+grid-template-areas:
+"form title"
+"form product"
+;
+align-content:flex-start;
+justify-content:center;
 padding: 20px 0;
+min-height:calc(100vh - 100px);
+@media(max-width: 1320px){
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
 @media (max-width: 400px){
     margin-top:50px;
     padding: 5px 0;
-}
+};
 `;
 export const TitleWrapper=styled.div`
-width:100%;
+width:500px;
 padding:5px 10px;
 display: flex;
 justify-content:center;
 align-items:center;
-flex-wrap:nowrap;
+flex-wrap:wrap;
+margin:0 auto;
+grid-area:title;
 @media (max-width: 599.98px){
-
+    width:100%;
     text-align:center;
 }
 `;
 export const Title=styled.h1`
-font-size: 2.5em;
+font-size: 2.3em;
 font-weight:normal;
-@media (max-width: 1000px){
-    font-size: 2em;
+@media (max-width: 700px){
+    font-size: 1.5em;
 };
 
 `;
 export const ProductsWrapper=styled.div`
 width:100%;
+height:100%;
+grid-area: product;
+position:relative;
 `;
-export const Btn=styled.button`
-width: 250px;
-height: 35px;
-background: ${({theme})=>theme.colors.button};
-border-radius:   5px;
-color:white;
-font-size: 1.05em;
-font-weight: bold;
-border:none;
-outline:none;
-margin:10px auto;
-@media (max-width: 330px){
-    width: 200px;
-}
-`;
-export const BtnWrapper = styled.div`
-width: 100%;
-display:flex;
-justify-content:space-between;
-align-items: center;
-flex-wrap:nowrap;
-padding: 10px 0;
-margin: 10px auto;
-@media (min-width: 1000px){
-    width:1000px;
-}
-@media (max-width: 620px){
-    flex-direction:column;
-}
-`;
+
+
 export const Sum=styled.h2`
 font-style:italic;
 font-weight:normal;
-width:1000px;
-height:50px;
+width:500px;
+height:80px;
 display:flex;
 justify-content:center;
 align-items:center;
-background:white;
-border-bottom:1px solid black;
 align-self:center;
 margin:0 auto;
 @media (max-width: 1050px){
     width:100%;
 }
 @media (max-width: 599.98px){
-    font-size: 1.3em;
+    font-size: 1.2em;
     height:40px;
 }
 `;
-export const DeliverTekst=styled(Sum)`
-border:none;
-`;
+
 export const Number=styled.p`
 font-size: 1.5em;
 color:black;
 padding: 10px;
 `;
+
+
