@@ -218,8 +218,8 @@ position:relative;
         transform: translateX(-110%);
     }
     :hover{
-        color:white;
-        font-weight:bold;
+        
+      
         ::before{
             transform: translateX(0);
         }

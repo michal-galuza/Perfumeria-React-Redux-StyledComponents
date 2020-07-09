@@ -1,6 +1,6 @@
 import React from 'react';
 import {Wrapper  , TitleWrapper , ProductsWrapper ,
-    Sum , Title, Number , SubmitBtn} from './BasketPageStyled';
+    Sum , Title, Number } from './BasketPageStyled';
 import BasketItem from '../../Components/BasketItem/BasketItem';
 import BasketForm from '../../Components/BasketForm/BasketForm';
 import { connect } from 'react-redux';

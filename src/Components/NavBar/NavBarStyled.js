@@ -69,6 +69,7 @@ z-index:1;
         transition: transform .3s ease-in-out ;
         transform: translateX(-110%);}
 :hover{
+    color:black;
     ::before{transform: translateX(0);}
     }
 }
@@ -76,6 +77,11 @@ z-index:1;
         background: ${({theme})=> theme.colors.button};
         color: #f2f2f2;
         animation: navitem__active .5s ease-in-out  both;
+        @media (hover: hover) and (pointer: fine){
+            :hover{
+                color:black;
+            }
+        }
     }
     @media(max-width: 1200px){width: 65%;
     margin: 25px 0; }
