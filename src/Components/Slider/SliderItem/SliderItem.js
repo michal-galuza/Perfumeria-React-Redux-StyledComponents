@@ -1,9 +1,9 @@
 import React from 'react';
 import {Item , Img , StyledLink , Description ,Type
-, Brand , Name , Price}  from './SliderItemStyled';
-const SliderItem = ({x , data , index}) => {
+, Brand , Name}  from './SliderItemStyled';
+const SliderItem = ({x , data , index , men}) => {
     return ( 
-    <Item x={x}>
+    <Item men={men} x={x}>
     <Img src={data.image}/>
     <Name>{data.name}</Name>
     <Brand>{data.brand}</Brand>

@@ -1,59 +1,63 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 export const Item=styled.div`
+position: relative;
 min-width:100%;
 height:100%;
-transform:translateX(${({x})=>x}%);
-transition:transform .4s ease-in-out;
-
-
 display:grid;
-grid-template-rows: 40px repeat( 2, 35px) 1fr 50px;
-grid-template-columns:30% 1fr 250px 50px;
-text-align:start;
-background:${({theme , men})=> men===true ? theme.gradients.purple : theme.gradients.pink};
-align-items:center;
+grid-template-columns:100%;
+grid-template-rows: 1fr 60px 20px 20px 60px;
 grid-template-areas:
-"img name name empty"
-"img brand brand empty"
-"img type type empty"
-"img description description empty"
-"img link link empty";
+"img"
+"name"
+"brand"
+"type"
+"btn";
+transform:translateX(${({x})=> x}%);
+transition:transform .5s ease-in-out;
+background:${({theme})=>theme.gradients.pinkButton};
 
+@media (min-width: 519.98px){
+    padding-right:39px;
+    grid-template-columns:40% 1fr;
+    grid-column-gap: 5px;
+grid-template-rows:  60px 30px 30px 1fr 60px;
+grid-template-areas:
+"img name"
+"img brand"
+"img type"
+"img description"
+"img btn"
+;
+}
 `;
 export const Img=styled.img`
+grid-area: img;
 width:100%;
 height:100%;
 object-fit:contain;
-grid-area:img;
 background:white;
 `;
-export const Name=styled.h2`grid-area:name;
-    font-size: 1.8em;
-    width:100%;
-    text-align:center;
-    font-weight:normal;
-    color:  black;
-    padding: 5px 0 0 0;
-`;
 export const StyledLink=styled(Link)`
-position:relative;
-grid-area:link;
-color:white;
-text-decoration:none;
-background: ${({theme})=>theme.colors.button};
-width:160px;
+grid-area: btn;
+width:150px;
 height:40px;
-display:flex;
+outline:none;
+position:relative;
+display: flex;
 justify-content:center;
 align-items:center;
+text-decoration: none;
+font-size: 1.05em;
+color:white;
 overflow:hidden;
 z-index:1;
-justify-self:flex-end;
-align-self:flex-start;
-margin: 0 60px;
-@media (hover: hover) and (pointer: fine){
-    ::before{
+background:${({theme})=>theme.colors.button};
+align-self:center;
+justify-self:center;
+@media (hover: hover) and (pointer: fine) {
+
+ ::before{
         content:'';
         position:absolute;
         width:100%;
@@ -61,43 +65,48 @@ margin: 0 60px;
         background: pink;
         z-index:-1;
         transition: transform .3s ease-in-out ;
-        transform: translateX(-110%);}
-:hover{
-    color:black;
-    ::before{transform: translateX(0);}
+        transform: translateX(-110%);
     }
-}
-  &.active{
-        background: ${({theme})=> theme.colors.button};
-        color: #f2f2f2;
-        animation: navitem__active .5s ease-in-out  both;
-        @media (hover: hover) and (pointer: fine){
-            :hover{
-                color:black;
-            }
+    :hover{
+        
+      color: black;
+        ::before{
+            transform: translateX(0);
         }
     }
+    }
 `;
-export const Brand=styled.p`
-grid-area:brand;
+export const Name=styled.h2`grid-area:name;
+grid-area: name;
 width:100%;
 height:100%;
 display:flex;
+justify-content:center;
 align-items:center;
-padding:0px 15px;
-font-size:1.2em;
-
+font-weight:normal;
+text-align:center;
+`;
+export const Brand=styled.p`
+grid-area: brand;
+width:100%;
+height:100%;
+text-align:center;
+font-style:italic;
+display:flex;
+justify-content:center;
+align-items:center;
 `;
 export const Type=styled(Brand)`
-grid-area:type;
+grid-area: type;
+width:100%;
+height:100%;
 `;
-export const Description=styled(Brand)`grid-area:description;
-font-style:italic;
+export const Description=styled(Brand)`
+grid-area: description;
+width:100%;
+height:100%;
+
+@media (max-width:519.98px){
+    display:none;
+}
 `;
-export const Price = styled(Brand)`grid-area:price;
-justify-content: flex-start;
-font-size:1.5em;
-padding: 0 50px;
-font-weight:bold;
-color:${({theme})=> theme.colors.button};
-`

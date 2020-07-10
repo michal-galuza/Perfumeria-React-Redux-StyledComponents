@@ -3,41 +3,36 @@ import styled from 'styled-components';
 
 export const Wrapper=styled.div`
 position:relative;
-width:70vw;
-height:250px;
 display:flex;
 overflow:hidden;
 background:white;
-border-radius:15px;
-box-shadow: 0 5px 45px 5px ${({theme})=> theme.colors.button};
+width: 100%;
+height: 400px;
+margin-bottom: 20px;
+border-top:1px solid black;
+border-bottom:1px solid black;
+@media (min-width: 799.98px){
+    height:300px;
+}
+@media(min-width: 1255.98px){
+    width:1150px;
+    border:1px solid black;
+}
 `;
 export const Btn=styled.button`
 position:absolute;
-top:0;
-left:${({right})=>right? `100%` : `0`};
-transform:translateX(${({right})=>right? `-100%` : `0`});
-z-index:10;
-width:50px;
-height:100%;
-background:transparent;
+top:50%;
 border:none;
+left:${({right})=>right? `100%`: `0`};
+transform:translate(${({right})=>right?`-100%` : `0`} , -50% );
+height: 60px;
+width:40px;
+background: rgba(0,0,0,0.2234068627450981);
 outline:none;
-font-size:25px;
-font-weight:bold;
-color:white;
-:hover{
-    background:rgba(0,0,0,0.1550595238095238);
-}
+text-align:center;
 `;
 export const P=styled.p`
-width:50px;
-height:50px;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius: 50%;
- background:rgba(0,0,0,0.1550595238095238);
- ${Btn}:hover &{
-    background:transparent;
- }
+color:white;
+font-size:3em;
+font-weight:bold;
 `;
