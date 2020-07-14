@@ -41,6 +41,7 @@ justify-content: space-around;
 align-items: center;
 flex-direction:row;
 flex-wrap:nowrap;
+max-width: 1150px;
 @media(max-width:650px){
    flex-direction:column; 
 }

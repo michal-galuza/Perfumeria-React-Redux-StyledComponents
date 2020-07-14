@@ -15,7 +15,7 @@ export const zapachy=[
         description: "woda perfumowana dla kobiet, w składzie znajdziemy tuberozę, jaśmin, który nadaje delikatności, kakao i bób tonkę, które uwalniają kobiecość. Zapach jednocześnie uwodzicielski i zmysłowy, ale także promienny i intrygujący",
         price: 540,
         image:"https://www.elnino-parfum.pl/data/cache/thumb_min500_max1000-min500_max1000-12/products/47845/1522316536/carolina-herrera-good-girl-woda-perfumowana-dla-kobiet-80-ml-210040.jpg",
-        
+        sale:20,
     },
     {
         brand: "Kilian",
@@ -24,6 +24,7 @@ export const zapachy=[
         description: "I DON'T NEED A PRINCE BY MY SIDE TO BE A PRINCESS. Zapach, który jednocześnie podkreśla słodycz każdej kobiety,ich delikatność, ale również ich ostrość. Zawiera cukrowe pianki marshmallow, delikatną zieloną herbatę oraz nadający wyrazistości imbir.",
         price: 509,
         image: "https://media-pl.douglas-shop.com/sgf/pl/436065/900_0/Kilian-My_Kind_Of_Love-Princess_Rose_De_Mai.jpg?imwidth=720",
+        sale:20,
     },
     {
         brand:"Dolce&Gabbana",
@@ -50,7 +51,7 @@ export const zapachy=[
         description: "Skandal pod postacią flakonu perfum. Wyrafinowany i elegancki zapach zestawiony z aurą seksownego i kabaretowego Placu Pigalle. Na początku wyczuwalny zapach świeżości i kwiatów - pomarańczy i gardenii. Po chwili zmysłowości dodają miód i paczula, niemal perwersyjnej, która wywołuje ciarki na skórze. Istny Scandal!",
         price: 485,
         image: "https://onlineperfumy.pl/uploads/product/9286/jean-paul-gaultier-scandal-50ml-edp.jpg",
-        
+        sale:50,
     },
     {
         brand: "Guerlain",
@@ -68,7 +69,7 @@ export const zapachy=[
         description: "Zapach krystalicznie czysty, zapewniający uczucie radości. Wyczuwalna nuta róży z Grasse - ulubiona róża samego Christiana Diora, wzbogacona o pikantną bergamotkę i mandarynkę. Bardzo subtelne ale jakże zmysłowe połączenie dające efekt rozkoszy na skórze.",
         price: 655,
         image: "https://www.sephora.pl/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw2c4fd673/images/hi-res/SKU/SKU_1094/491889_swatch.jpg",
-        
+        sale:50,
     },
     {
         brand: "Chloe",
@@ -124,7 +125,7 @@ export const kremy_do_twarzy=[
             description:"Najbardziej luksusowy i zaawansowany technologicznie krem do twarzy. Przywracający skórze pełen blask. Jedwab Koishimaru odżywia i nawilża jednocześnie działa przeciwstarzeniowo i pobudza wytwarzanie kwasu hialuronowego przez skórę. Swoją bogatą kosystencję zawdzięcza olejkowi ryżowemu. ",
             price: 3349,
             image: "https://static.dolce.pl/hires/88/25308.jpg",
-            
+            sale:20,
         },
         {
             brand: "La Mer",
@@ -151,7 +152,7 @@ export const kremy_do_twarzy=[
             description: "Silna regeneracja i mocne nawilżenie skóry, dzięki stymulacji produkcji naturalnego kwasu hialuronowego. Zatrzymuje poziom nawilżenia w skórze aż do 72 godzin po zastosowaniu. Forma żelowa szybko się wchłania dzięki czemu idealnie nadaje się na dzień pod makijaż, ale także na noc kiedy potrzebujemy szybkiej i prostej pielęgnacji.",
             price: 129,
             image: "https://www.sephora.pl/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw62b8b600/images/hi-res/SKU/SKU_6/428154_swatch.jpg",
-            
+            sale:20,
         },
         {
             brand: "Yonelle",
@@ -178,7 +179,7 @@ export const kremy_do_twarzy=[
             description:"Korygujący krem na dzień do każdego typu skóry. Mocne nawilżenie dzięki kwasowi hialuronowemu, dodatkowo podnosi owal twarzy. Przy regularnym stosowaniu cera jest o wiele bardzie sprężysta, gładka i bardziej promienna.",
             price:399,
             image:"https://static.wizaz.pl/media/images/kwc/product/745/072/72745/587916.jpeg",
-            
+            sale:50,
             
         },
         {
@@ -195,9 +196,9 @@ export const kremy_do_twarzy=[
             name:"Acne",
             type:"krem do twarzy",
             description:"Krem do cery trądzikowej, prolematycznej. Działanie rozjaśniające skórę, łagodzące oraz pomagajace w zwalczaniu trądziku. Pomaga leczyć ale również zapobiega powstawaniu nowych zmian na skórze. Po nałożeniu mamy efekt lekko satynowej skóry.",
-            price: 69,
+            price: 697,
             image:"https://media-pl.douglas-shop.com/sgf/pl/899958/900_0/Norel_Dr_Wilsz-Acne-Krem_na_niedoskona_osci_z_LHA_i_jonami_srebra.jpg?imwidth=720",
-            
+            sale:50,
         },
         {
             brand:"Artemis",
@@ -263,7 +264,7 @@ export const kremy_pod_oczy=[
         description:"Skocentrowany krem peptydowy do pielęgnacji okolic oczu. Zawiera naturalne olejki roślinne i substancje nawilżające. Przeciwdziała powstawaniu zmarszczek, redukuje cienie pod oczami, Bogata konsystencja nadaje się również pod makijaż, a na noc można stosować grubszą warstwę jako maskę silnie nawilżającą.",
         price:319,
         image:"https://media-pl.douglas-shop.com/sgf/pl/508082/900_0/Bobbi_Brown-Oczy-Extra_Eye_Repair_Cream.jpg?imwidth=720",
-        
+        sale:50,
     },
     {
         brand:"Norel Dr Wilsz",
@@ -290,7 +291,7 @@ export const kremy_pod_oczy=[
         description:"Ultraodżywczy, przeciwstarzeniowy krem pod oczy. Zmniejsza widoczność cieni pod oczami, wygładza zmarszczki, pomaga w walce z opuchnięciami okolicy wokół oczu. Mocno nawilża skórę i chroni przed działaniem niebieskiego światła. Dodatkowo specjlnie wyprofilowany aplikator masujący pomaga w codziennej pielęgnacji.",
         price:289,
         image:"https://www.sephora.pl/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwfce2bf27/images/hi-res/SKU/SKU_5/400357_swatch.jpg",
-        
+        sale:50,
     },
     {
         brand:"Collistar",
@@ -308,7 +309,7 @@ export const kremy_pod_oczy=[
         description:"Przełom w pielęgnacji delikatnej i cienkiej skóry wokół oczu. Chroni przed utratą wilgoci, regeneruje uszkodzenia i wspomaga witalną kondycję skóry. Chroni przed promieniowaniem UV i działaniem czynników środowiskowych. Wspomaga produkcję kolagenu dzięki czemu skóra jest bardziej ujędrniona i elastyczna.",
         price:779,
         image:"https://media-pl.douglas-shop.com/sgf/pl/264706/900_0/La_Prairie-Anti_Aging_Collection-Anti_Aging_Eye_Cream_SPF_15.jpg?imwidth=720",
-        
+        sale:20,
     },
     {
         brand:"Shiseido",
@@ -317,7 +318,7 @@ export const kremy_pod_oczy=[
         description:"Mocno liftingujący krem pod oczy. Reguluje naturalny poziom nawilżenia skóry, dodatkowo mocno ją napinając i wygładzając zmarszczki w okolicy oczu. Odbudowuje gęstość skóry. Wspomaga funkcje kontroli i regeneracji komórek w procesie ich odnowy.",
         price:395,
         image:"https://www.sephora.pl/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw12f1422a/images/hi-res/SKU/SKU_5/360546_swatch.jpg?sw=585&sh=585&sm=fit",
-        
+        sale:20,
     },
     {
         brand:""

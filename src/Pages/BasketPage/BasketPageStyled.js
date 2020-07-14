@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
 position:relative;
 width:100%;
 margin-top:80px;
-background:${({theme})=>theme.gradients.navBar};
+min-height: calc(100vh - 80px);
+background:${({theme})=>theme.colors.primaryChanged};
 display:grid;
 grid-template-rows: 150px 1fr ;
 grid-template-columns:350px 1fr ;
@@ -15,7 +16,6 @@ grid-template-areas:
 align-content:flex-start;
 justify-content:center;
 padding: 20px 0;
-min-height:calc(100vh - 100px);
 @media(max-width: 1320px){
 display:flex;
 flex-direction:column;

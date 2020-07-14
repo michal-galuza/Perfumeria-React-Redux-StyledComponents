@@ -71,12 +71,20 @@ display:flex;
 justify-content:center;
 align-items:center;
 `;
-export const Price = styled.p`
+export const Price = styled.div`
 grid-row: 7/8;
 display:flex;
 justify-content:center;
 align-items:center;
+width:100%;
+height:100%;
+`;
 
+export const P=styled(Price)`
+width:75px;
+height:100%;
+text-decoration:line-through;
+margin: 0 2px;
 `;
 
 

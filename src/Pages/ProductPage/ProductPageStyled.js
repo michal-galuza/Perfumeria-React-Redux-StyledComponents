@@ -241,3 +241,12 @@ position:relative;
     }
   
 `;
+export const P=styled.div`
+width:80px;
+height:100%;
+text-decoration:line-through;
+margin: 0 2px;
+display:flex;
+justify-content:center;
+align-items:center;
+`;

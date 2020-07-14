@@ -16,7 +16,7 @@ border-bottom:1px solid black;
 }
 @media(min-width: 1255.98px){
     width:1150px;
-    border:1px solid black;
+    border:1px solid white;
 }
 `;
 export const Btn=styled.button`

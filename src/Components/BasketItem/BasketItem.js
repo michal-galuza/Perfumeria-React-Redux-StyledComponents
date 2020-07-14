@@ -27,7 +27,7 @@ const BasketItem = ({data , click , update , className}) => {
                 ))}
        </Input>
        </Label>
-       <Label>Razem:  <p>{count} zł</p></Label>
+       <Label>Razem:  <p>{Number(count).toFixed(2)} zł</p></Label>
         <Btn onClick={()=>click(data)}> Usuń</Btn>
       </Wrapper>
      );

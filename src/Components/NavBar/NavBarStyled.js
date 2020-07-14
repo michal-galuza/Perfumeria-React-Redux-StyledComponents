@@ -42,7 +42,7 @@ export const NavItem=styled(NavLink)`
 
 position:relative;
 width:180px;
-height:35px;
+height:40px;
 background:white;
 color:black;
 text-decoration:none;
@@ -83,7 +83,8 @@ z-index:1;
             }
         }
     }
-    @media(max-width: 1200px){width: 65%;
+    @media(max-width: 1200px){
+    width: 65%;
     margin: 25px 0; }
 
 `;

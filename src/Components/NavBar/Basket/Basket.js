@@ -1,10 +1,11 @@
 import React from 'react';
 import {Image , Button , Number} from './BasketStyled';
 import { connect } from 'react-redux';
+import basketIcon from '../../../Data/Icons/basketIcon.png';
 const Basket=({data , fn})=>(
   
 <Button onClick={fn} to="/koszyk">
-<Image  src="https://www.materialui.co/materialIcons/action/shopping_basket_white_192x192.png"/>
+<Image  src={basketIcon}/>
 <Number>{JSON.parse(sessionStorage.getItem("items")).length}</Number>
 </Button>
 );

@@ -21,7 +21,7 @@ const BasketPage = ({data}) => {
     {number===undefined || number===0 ? "0 produktów":number===1? "  1 produkt":number<5?`  ${number} produkty`:`  ${number} produktów`}
     </Number>
     <br/>
-    <Sum>Całkowity koszt: {sumFn(storage)} zł </Sum>
+    <Sum>Całkowity koszt: {sumFn(storage).toFixed(2)} zł </Sum>
       </TitleWrapper>
       <ProductsWrapper>
     {storage.map((item , index)=>(<BasketItem  data={item} key={index}/>))}

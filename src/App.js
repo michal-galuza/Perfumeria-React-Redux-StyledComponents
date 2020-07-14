@@ -8,7 +8,7 @@ import NavBar from './Components/NavBar/NavBar';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
 import BasketPage from './Pages/BasketPage/BasketPage';
-
+import BasketIcon from './Components/BasketIcon/BasketIcon';
  const App = ()=>{
 if(sessionStorage.getItem("items")===null){
    sessionStorage.setItem("items" , JSON.stringify( [] ))
@@ -17,6 +17,7 @@ if(sessionStorage.getItem("items")===null){
     <BrowserRouter >
     <>
     <NavBar/>
+    
     <Switch>
 
        <Route exact path="/" component={Root}/>
@@ -27,9 +28,10 @@ if(sessionStorage.getItem("items")===null){
        <Route exact  path="/produkty/:type" component={Products}/>
        <Route  exact path="/produkty/:type/:category" component={Products} />
        <Route  exact path="/produkty/:type/:category/:index" component={ProductPage} />
-
+      
       <Route component={ErrorPage}/>
     </Switch>
+    <BasketIcon />
     </>
     </BrowserRouter>
 );
