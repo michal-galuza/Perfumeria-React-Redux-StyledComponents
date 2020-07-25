@@ -85,6 +85,4 @@ export default connect(mapStateToProps , {}) (Prodcuts);
 
 
 
-//kategorie póki co bez obrazków trzeba wymyślić na to 
-//patent
 

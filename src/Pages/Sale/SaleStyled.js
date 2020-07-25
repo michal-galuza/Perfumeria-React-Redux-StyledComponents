@@ -17,6 +17,7 @@ background:${({theme})=>theme.colors.primaryChanged};
 export const WrapperContent=styled.div`
 padding:20px;
 width:100%;
+max-width:1000px;
 min-height: calc(100vh - 80px);
 display:flex;
 justify-content:center;
