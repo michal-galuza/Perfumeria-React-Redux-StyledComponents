@@ -1,6 +1,6 @@
 import React from 'react'
 import {Wrapper , Map , InfoWrapper , H2 , InfoText , P, Logo} from './AboutUsStyled';
-import theme from '../../Styled/theme';
+
 
 const AboutUs =()=>{
  return(<Wrapper>

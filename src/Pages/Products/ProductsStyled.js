@@ -63,7 +63,7 @@ font-size: 2em;
 text-decoration: none;
 background-image: url("https://www.baldingbeards.com/wp-content/uploads/2018/02/best-skin-care-products-1024x683.jpg") ;
 background-size: contain;
-background-repeat: repeat;
+background-repeat: repeat-y;
 transition: transform .2s linear;
 box-shadow: 0px 20px 20px -20px black;
 border: 1px solid black;
@@ -95,7 +95,7 @@ background-image: url("https://i.notino.com/images/gallery/blog_all/cz-rest/wome
 background-size: contain;
 `;
 export const ForAll = styled(ForHim)`
-background-image:url("https://scontent-frt3-1.xx.fbcdn.net/v/t1.15752-9/101661286_657049501893457_2446305911719854080_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=iDeQ3PPy7Y4AX_GRHTh&_nc_ht=scontent-frt3-1.xx&oh=86deeb7b549ad8de13283969b85090b0&oe=5EFD108A");
+background-image:url("https://i.iplsc.com/dodatki-chemiczne-stosowane-latami-i-w-polaczeniu-z-innymi-k/0007VWGSIKBWMFA3-C122-F4.jpg");
 background-size: cover;
 `;
 export const H2= styled.h2`

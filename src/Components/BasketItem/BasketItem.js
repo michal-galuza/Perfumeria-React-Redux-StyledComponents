@@ -15,7 +15,7 @@ const BasketItem = ({data , click , update , className}) => {
  
     return (
         <Wrapper className={className}>
-        <Img alt={data.name} width="100%" height="100%" src={data.image}/>
+        <Img alt={data.name + " " + data.brand} width="100%" height="100%" src={data.image}/>
         <Label>Nazwa:  <H3>{data.name}</H3></Label>
         <Label>Marka:   <H3>{data.brand}</H3></Label>
       <Label>Rodzaj: <p>{data.kind}</p></Label>

@@ -25,4 +25,9 @@ const updateNumber=(data , e)=>(
      name:data.name
     }
             )
-export default {addItem , deleteItem , updateNumber};
+const deleteAll=()=>(
+    {type:types.DELETE_ALL
+
+    }
+)
+export default {addItem , deleteItem , updateNumber , deleteAll};

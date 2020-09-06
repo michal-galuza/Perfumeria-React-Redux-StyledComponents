@@ -19,9 +19,9 @@ return(
 <Wrapper>
 <WrapperContent>
 <H1>Przeceny 20% dla niego</H1>
-{renderFn(dataSecond, "dlaNiej" , 20)}
+{renderFn(data, "dlaNiego" , 20)}
 <H1>Przeceny 50% dla niego</H1>
-{renderFn(dataSecond, "dlaNiej" , 50)}
+{renderFn(data, "dlaNiego" , 50)}
 </WrapperContent>
 <WrapperContent>
 <H1>Przeceny 20% dla niej</H1>

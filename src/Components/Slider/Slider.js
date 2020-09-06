@@ -2,7 +2,7 @@ import React, {useState}  from "react";
 import { Btn , Wrapper , P} from './SliderStyled';
 import SliderItem from './SliderItem/SliderItem';
 import { connect } from "react-redux";
-const Slider = ({data , men}) => {
+const Slider = ({data , men , sex}) => {
     
 
  const tab=[data.zapachy[0] , data.zapachy[1] , data.zapachy[2] , data.zapachy[3] , data.zapachy[4] ,  data.zapachy[5] ];
@@ -24,7 +24,7 @@ return(
     
     </>);
 }
-const mapStateToProps=state=>({
-    data: state.dlaNiej,
+const mapStateToProps=(state ,ownProps)=>({
+    data: state[ownProps.sex],
 })
 export default connect(mapStateToProps , {}) (Slider);

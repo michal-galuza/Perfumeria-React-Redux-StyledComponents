@@ -34,7 +34,7 @@ const ProductPage = ({data , match , click}) => {
             </ModalWrapper>
         </ModalAdd>
         <WrapperImg type={match.params.type}>
-        <Img height="100%" src={image}/>
+        <Img height="100%" src={image} alt={name + " " +brand}/>
         </WrapperImg>
         <WrapperContent>
         <Name > {name}</Name>
@@ -54,7 +54,7 @@ const ProductPage = ({data , match , click}) => {
           /></Label> 
             <Btn onClick={()=>{ 
                  sale!==undefined?  data.price=Number(price-(price/100*sale)).toFixed(2): price=price;
-                 console.log(data)
+        
                 return(click(data))
                 }}>Dodaj do koszyka</Btn>
             </BtnWrapper>

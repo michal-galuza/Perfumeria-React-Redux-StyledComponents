@@ -4,10 +4,9 @@ import { Wrapper , Image , Name
 
 const ProductCard =({items  , to , match })=>{
   const {image , name , brand , type , price , sale}=items;
-  console.log(sale)
 return(
        <Wrapper color={match}  to={to}>
-        <Image height="100%" src={image}></Image>
+        <Image height="100%" src={image} alt={name + " " +brand}></Image>
         <Name>{name}</Name>
         <Brand>{brand}</Brand>
         <Type>{type}</Type>

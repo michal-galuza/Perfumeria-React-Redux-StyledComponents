@@ -1,16 +1,44 @@
-import React,{useState} from 'react';
+import React,{useState } from 'react';
 import {Input , Form , Logo , Fielset , Label , Radio , H2 , Btn} from './BasketFormStyled';
-import {useHistory} from 'react-router-dom';
+import DeliveryModal from '../../Components/DeliveryModal/DeliveryModal';
+
+
 const BasketForm = ({number }) => {
   const [personal, setPersonal]=useState(false);
-  let history=useHistory();
+  const [delivery , setDelivery]=useState("")
+  
+
   const submitFn=e=>{
     e.preventDefault();
-    history.push('/')
+   if(personal){
+     const deliveryData={
+       name: e.target[2].value,
+       surname: e.target[3].value,
+       phone: e.target[4].value,
+       mail: e.target[5].value, 
+           }
+           setDelivery(deliveryData);
+   }else{
+     const packageData={
+    name: e.target[2].value,
+       surname: e.target[3].value,
+       postCode: e.target[4].value,
+       city: e.target[5].value, 
+       street:e.target[6].value,
+       houseNumber:e.target[7].value,
+       phone:e.target[8].value,
+       mail:e.target[9].value
+     }
+     setDelivery(packageData);
+  }
+   e.target.reset();
+  
   }
     return ( 
         <Form onSubmit={submitFn}>
-        <Logo>Katarzynix</Logo>
+        {delivery===""? "":<DeliveryModal  fn={setDelivery} data={delivery}/>}
+        
+        <Logo>Perfumeria</Logo>
    <Fielset>
    <Label for="personal">Odbiór osobisty
    <Radio checked={personal===true? true:false} onClick={()=>setPersonal(true)}  name="delivery" id="personal" type="radio"/>
@@ -39,12 +67,12 @@ const BasketForm = ({number }) => {
     <Input minLength="9" type="number " id="number" 
     pattern="[0-9]{3}[0-9]{3}[0-9]{3}" inputMode="numeric"
     placeholder="Nr telefonu" required title="Wpisz numer telefonu 999999999"/>
-    <Input minLength="5" type="text" id="email" 
+    <Input minLength="5" type="email" id="email" 
     placeholder="E-mail" required title="Wpisz e-mail"/>
     <Btn  disabled={number===0? true : false} type="submit">Zamawiam</Btn>
     </Form>
 
      );
 }
- 
+
 export default BasketForm;

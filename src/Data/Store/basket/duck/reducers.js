@@ -46,6 +46,11 @@ switch(action.type){
                 sessionStorage.setItem("items" , JSON.stringify(storageSecond));
                 return storageSecond
 
+            case types.DELETE_ALL:
+                sessionStorage.setItem("items" , JSON.stringify( [] ));
+                return " "
+
+              
 
             default:
                 return(state)

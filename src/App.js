@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter , Switch , Route} from 'react-router-dom';
+import React  from 'react';
+import {HashRouter , Switch , Route} from 'react-router-dom';
 import Sale from './Pages/Sale/Sale';
 import Products from './Pages/Products/Products';
 import AboutUs from './Pages/AboutUs/AboutUs';
@@ -14,7 +14,7 @@ if(sessionStorage.getItem("items")===null){
    sessionStorage.setItem("items" , JSON.stringify( [] ))
 }
  return(
-    <BrowserRouter >
+    <HashRouter >
     <>
     <NavBar/>
     
@@ -33,7 +33,7 @@ if(sessionStorage.getItem("items")===null){
     </Switch>
     <BasketIcon />
     </>
-    </BrowserRouter>
+    </HashRouter>
 );
  }
 export default App;
